@@ -1,0 +1,33 @@
+
+from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
+
+yhteys=luo_yhteys()
+while True:
+    print("1. valitse olemassa oleva pelaaja")
+    print(" 2. valitse uusi pelaaja")
+    valinta=input("Valitse toiminto:")
+
+    if valinta=="1":
+        matkustaja = input("anna matkustajan nimi: ")
+        tarkistaminen = pelaajan_tarkistus(yhteys, matkustaja)
+
+        if tarkistaminen:
+            print("Nimi on jo käytössä tietokannassa,valitse toinen nimi")
+            break
+        else:
+           print("Nimeä ei löytynyt tietokannasta")
+
+    elif valinta=="2":
+        matkustaja = input("Luo uusi matkustaja: ")
+        tarkistaminen = pelaajan_tarkistus(yhteys, matkustaja)
+        if tarkistaminen:
+            print("Nimi on jo käytössä")
+        else:
+            pelaajan_lisays(yhteys,matkustaja)
+            print("Olet luonnut peliin uuden matkustajan")
+            break
+    else:
+        print("virheelinen komento")
+
+
+print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
