@@ -6,7 +6,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-         password='kissa12',
+         password='Rajan201822',
          autocommit=True,
         use_pure = True
          )
@@ -15,7 +15,7 @@ def luo_yhteys():
 def pelaajan_lisays(yhteys,matkustaja):
     kursori = yhteys.cursor()
     sql = "INSERT INTO game (location,screen_name,has_ticket,security,luggage) values(%s,%s,%s,%s,%s)"
-    values=("EFHK",matkustaja,1,0,1)
+    values = ("EFHK",matkustaja,1,0,1)
     kursori.execute(sql,values)
     return matkustaja
 
