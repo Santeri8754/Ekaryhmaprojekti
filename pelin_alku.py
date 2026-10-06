@@ -12,7 +12,7 @@ while True:
         tarkistaminen = pelaajan_tarkistus(yhteys, matkustaja)
 
         if tarkistaminen:
-            print("Nimi on jo käytössä tietokannassa,valitse toinen nimi")
+            print("Matkustaja löytyi")
             break
         else:
            print("Nimeä ei löytynyt tietokannasta")
