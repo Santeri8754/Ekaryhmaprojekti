@@ -15,7 +15,7 @@ def luo_yhteys():
 def pelaajan_lisays(yhteys,matkustaja):
     kursori = yhteys.cursor()
     sql = "INSERT INTO game (location,screen_name,has_ticket,security,luggage) values(%s,%s,%s,%s,%s)"
-    values = ("EFHK",matkustaja,1,0,1)
+    values = ("EFHK",matkustaja,0,0,0)
     kursori.execute(sql,values)
     return matkustaja
 
@@ -26,3 +26,18 @@ def pelaajan_tarkistus(yhteys,matkustaja):
     kursori.execute(sql_tarkistus)
     tarkistus = kursori.fetchone()
     return tarkistus
+
+
+def lipun_haku(yhteys,matkustaja):
+    kursori = yhteys.cursor()
+    sql_haku = f"select has_ticket from game where screen_name='{matkustaja}'"
+    kursori.execute(sql_haku)
+    tarkistus1 = kursori.fetchone()
+    return  tarkistus1
+
+
+def lipun_Update (yhteys,matkustaja):
+    kursori = yhteys.cursor()
+    sql_paivitys = f"Update game set has_ticket=%s where screen_name='{matkustaja}'"
+    kursori.execute(sql_paivitys)
+    return matkustaja
