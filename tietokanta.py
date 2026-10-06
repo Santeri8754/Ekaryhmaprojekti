@@ -2,12 +2,12 @@ import mysql.connector
 
 def luo_yhteys():
     return mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='flight_game',
-         user='root',
-         password='Rajan201822',
-         autocommit=True,
+        host='127.0.0.1',
+        port= 3306,
+        database='flight_game',
+        user='root',
+        password='tietokone020',
+        autocommit=True,
         use_pure = True
          )
 
@@ -26,3 +26,11 @@ def pelaajan_tarkistus(yhteys,matkustaja):
     kursori.execute(sql_tarkistus)
     tarkistus = kursori.fetchone()
     return tarkistus
+
+def tarkastus(matkustaja):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql = f"SELECT has_ticket FROM game WHERE screen_name = '{matkustaja}'"
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    return tulos
