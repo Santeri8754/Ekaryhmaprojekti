@@ -8,7 +8,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-      password='Rajan201822',
+      password="kissa12",
          autocommit=True,
         use_pure = True
          )
