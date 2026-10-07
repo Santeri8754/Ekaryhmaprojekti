@@ -1,5 +1,8 @@
 import mysql.connector
 
+import turvatarkastus
+
+
 def luo_yhteys():
     return mysql.connector.connect(
          host='127.0.0.1',
@@ -65,3 +68,18 @@ def matkalaukku_update (matkustaja, matkalaukut):
     sql_matkalaukku = f"Update game set matkalaukku where screen_name='{matkustaja}'"
     kursori.execute(sql_matkalaukku)
     return matkalaukut
+
+def turvatarkastus_update(matkalaukku):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql_update = f"Update game set turvatarkastus where screen_name='{matkalaukku}'"
+    kursori.execute(sql_update)
+    return
+
+def check_turvatarkastus (matkustaja):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql_select = f"select security from game where screen_name='{matkustaja}'"
+    kursori.execute(sql_select)
+    return kursori.fetchone()
+

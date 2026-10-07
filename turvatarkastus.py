@@ -1,3 +1,8 @@
+
+
+import tietokanta
+
+
 def turvatarkastus(matkalaukku, laiton):
     tavarat = input("Anna tavarat: ")
 
@@ -9,6 +14,8 @@ def turvatarkastus(matkalaukku, laiton):
         if tavara in laiton:
             print("Laittomia laitteita löytyi matkalaukustasi. Peli ohi!")
             return
+
+    tietokanta.turvatarkastus_update(matkustaja)
 
     print("Matkalaukkusi on hyvä. Voit jatkaa!")
 

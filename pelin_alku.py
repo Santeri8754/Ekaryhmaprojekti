@@ -1,6 +1,9 @@
 
 from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
+<<<<<<< Updated upstream
 from lippu import lippu
+=======
+>>>>>>> Stashed changes
 yhteys=luo_yhteys()
 
 while True:
@@ -34,4 +37,7 @@ while True:
 print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
 
 
+<<<<<<< Updated upstream
 pelaajan_lippu=lippu(matkustaja)
+=======
+>>>>>>> Stashed changes
