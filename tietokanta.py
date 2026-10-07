@@ -1,6 +1,6 @@
 import mysql.connector
 
-import turvatarkastus
+# import turvatarkastus
 
 
 def luo_yhteys():
@@ -9,7 +9,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-         password='Rajan201822',
+         password='tietokone020',
          autocommit=True,
         use_pure = True
          )
@@ -37,10 +37,13 @@ def lipun_haku(yhteys,matkustaja):
     tarkistus1 = kursori.fetchone()
     return  tarkistus1
 
-
-
-
-
+def lentokentta(kentta_syote):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql = f"SELECT name FROM airport WHERE name = '{kentta_syote}'"
+    kursori.execute(sql)
+    tulos = kursori.fetchone()
+    return tulos
 
 def lipun_Update (yhteys,matkustaja):
     kursori = yhteys.cursor()
