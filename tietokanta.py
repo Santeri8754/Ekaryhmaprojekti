@@ -1,5 +1,8 @@
 import mysql.connector
 
+# from pelin_alku import matkustaja
+
+
 def luo_yhteys():
     return mysql.connector.connect(
         host='127.0.0.1',
@@ -33,4 +36,12 @@ def tarkastus(matkustaja):
     sql = f"SELECT has_ticket FROM game WHERE screen_name = '{matkustaja}'"
     kursori.execute(sql)
     tulos = kursori.fetchall()
+    return tulos
+
+def lentokentta(kentta):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql = f"SELECT name FROM airport WHERE name = '{kentta}'"
+    kursori.execute(sql)
+    tulos = kursori.fetchone()
     return tulos

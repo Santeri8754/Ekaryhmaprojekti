@@ -31,3 +31,4 @@ while True:
 
 
 print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
+

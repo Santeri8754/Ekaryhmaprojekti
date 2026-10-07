@@ -3,6 +3,7 @@ from tietokanta import tarkastus
 def turvatarkastus(matkalaukku, laiton):
     matkustaja = "Heini"
     lippu = tarkastus(matkustaja)
+
     if lippu[0][0] == 1:
         tavarat = input("Anna tavarat: ")
 
