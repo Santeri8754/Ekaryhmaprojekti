@@ -47,16 +47,9 @@ def lipun_Update (yhteys,matkustaja):
     return matkustaja
 
 =======
-def lipun_haku(yhteys,matkustaja):
-    kursori = yhteys.cursor()
-    sql_haku = f"select has_ticket from game where screen_name='{matkustaja}'"
-    kursori.execute(sql_haku)
-    tarkistus1 = kursori.fetchone()
-    return  tarkistus1
 >>>>>>> ab1121af88e43114dc8d44e74d18c6b49c0417e1
 
 
-def lipun_Update (yhteys,matkustaja):
 def matkalaukun_haku(yhteys, matkustaja):
     kursori = yhteys.cursor()
     sql_paivitys = f"Update game set has_ticket=%s where screen_name='{matkustaja}'"
