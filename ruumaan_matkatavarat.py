@@ -8,9 +8,9 @@ def ruuman_matkatavarat():
 # kommentti
     while True:
         try:
-            laukkujen_määrä = int(input("Kuinka monta laukkuu sulla on? "))
+            laukkujen_maara = int(input("Kuinka monta laukkuu sulla on? "))
 
-            if laukkujen_määrä > 0:
+            if laukkujen_maara > 0:
                 break
 
             print("anna ainakin yksi laukku ")
@@ -18,7 +18,7 @@ def ruuman_matkatavarat():
         except ValueError:
             print("Anna määrä numerona.")
 
-    for i in range(1, laukkujen_määrä + 1):
+    for i in range(1, laukkujen_maara + 1):
         while True:
             try:
                 paino = float(input(f"anna laukun {i} paino kilogrammoina: "))
