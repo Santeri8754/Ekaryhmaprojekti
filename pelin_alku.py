@@ -34,4 +34,7 @@ while True:
 print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
 
 
+
 pelaajan_lippu=lippu(matkustaja)
+
+
