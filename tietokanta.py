@@ -8,7 +8,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-      password="kissa12",
+        password="kissa12",
          autocommit=True,
         use_pure = True
          )
@@ -59,11 +59,11 @@ def matkalaukku_update (matkustaja, matkalaukut):
     kursori.execute(sql_matkalaukku)
     return matkalaukut
 
-def turvatarkastus_update(matkustaja):
+def turvatarkastus_update(security,matkustaja):
     yhteys = luo_yhteys()
     kursori = yhteys.cursor()
-    sql_update = "UPDATE game SET security = %s"
-    kursori.execute(sql_update, (matkustaja,))
+    sql_update = f"UPDATE game SET security = {security} where screen_name='{matkustaja}'"
+    kursori.execute(sql_update)
     kursori.fetchone()
     return matkustaja
 

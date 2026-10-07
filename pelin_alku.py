@@ -2,6 +2,7 @@
 from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
 from lippu import lippu
 from ruumaan_matkatavarat import ruuman_matkatavarat
+from turvatarkastus import turvatarkastus,laiton_lista
 yhteys=luo_yhteys()
 
 while True:
@@ -40,4 +41,4 @@ pelaajan_lippu=lippu(matkustaja)
 
 ruuma = ruuman_matkatavarat( matkustaja)
 
-turvatarkastus = turvatarkastus( matkustaja)
+turvatarkastus = turvatarkastus( [],laiton_lista,matkustaja)
