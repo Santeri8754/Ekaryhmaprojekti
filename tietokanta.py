@@ -8,7 +8,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-         password='Rajan201822',
+      password='Rajan201822',
          autocommit=True,
         use_pure = True
          )
@@ -37,18 +37,25 @@ def lipun_haku(yhteys,matkustaja):
     return  tarkistus1
 
 
-
-
 def lipun_Update (yhteys,matkustaja):
     kursori = yhteys.cursor()
-    sql_paivitys = f"Update game set has_ticket=%s where screen_name='{matkustaja}'"
+    sql_paivitys = f"Update game set has_ticket=1 where screen_name='{matkustaja}'"
     kursori.execute(sql_paivitys)
     return matkustaja
+
+
+
+def matkalaukun_haku(yhteys, matkustaja):
+    kursori = yhteys.cursor()
+    sql_laukku_haku=f"select luggage from game where screen_name='{matkustaja}'"
+    kursori.execute(sql_laukku_haku)
+    tarkistus2 = kursori.fetchone()
+    return tarkistus2
 
 def matkalaukku_update (matkustaja, matkalaukut):
     yhteys = luo_yhteys()
     kursori = yhteys.cursor()
-    sql_matkalaukku = f"Update game set luggage where screen_name='{matkustaja}'"
+    sql_matkalaukku = f"Update game set luggage = {matkalaukut} where screen_name='{matkustaja}'"
     kursori.execute(sql_matkalaukku)
     return matkalaukut
 

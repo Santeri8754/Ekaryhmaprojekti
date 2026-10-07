@@ -1,6 +1,7 @@
 
 from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
 from lippu import lippu
+from ruumaan_matkatavarat import ruuman_matkatavarat
 yhteys=luo_yhteys()
 
 while True:
@@ -13,7 +14,7 @@ while True:
         tarkistaminen = pelaajan_tarkistus(yhteys, matkustaja)
 
         if tarkistaminen:
-            print("Nimi on jo käytössä tietokannassa,valitse toinen nimi")
+            print("Matkustaja löytyi")
             break
         else:
            print("Nimeä ei löytynyt tietokannasta")
@@ -37,4 +38,6 @@ print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
 
 pelaajan_lippu=lippu(matkustaja)
 
+ruuma = ruuman_matkatavarat( matkustaja)
 
+turvatarkastus = turvatarkastus( matkustaja)
