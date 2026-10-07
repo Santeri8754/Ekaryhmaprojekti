@@ -1,9 +1,7 @@
 
 from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
-<<<<<<< Updated upstream
 from lippu import lippu
-=======
->>>>>>> Stashed changes
+from ruumaan_matkatavarat import ruuman_matkatavarat
 yhteys=luo_yhteys()
 
 while True:
@@ -16,7 +14,7 @@ while True:
         tarkistaminen = pelaajan_tarkistus(yhteys, matkustaja)
 
         if tarkistaminen:
-            print("Nimi on jo käytössä tietokannassa,valitse toinen nimi")
+            print("Matkustaja löytyi")
             break
         else:
            print("Nimeä ei löytynyt tietokannasta")
@@ -37,7 +35,7 @@ while True:
 print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
 
 
-<<<<<<< Updated upstream
+
 pelaajan_lippu=lippu(matkustaja)
-=======
->>>>>>> Stashed changes
+
+ruuma = ruuman_matkatavarat( matkustaja)

@@ -57,15 +57,21 @@ def lipun_haku(yhteys,matkustaja):
 
 
 def lipun_Update (yhteys,matkustaja):
+def matkalaukun_haku(yhteys, matkustaja):
     kursori = yhteys.cursor()
     sql_paivitys = f"Update game set has_ticket=%s where screen_name='{matkustaja}'"
     kursori.execute(sql_paivitys)
     return matkustaja
+    sql_laukku_haku=f"select luggage from game where screen_name='{matkustaja}'"
+    kursori.execute(sql_laukku_haku)
+    tarkistus2 = kursori.fetchone()
+    return tarkistus2
 
 def matkalaukku_update (matkustaja, matkalaukut):
     yhteys = luo_yhteys()
     kursori = yhteys.cursor()
     sql_matkalaukku = f"Update game set matkalaukku where screen_name='{matkustaja}'"
+    sql_matkalaukku = f"Update game set luggage = {matkalaukut} where screen_name='{matkustaja}'"
     kursori.execute(sql_matkalaukku)
     return matkalaukut
 
