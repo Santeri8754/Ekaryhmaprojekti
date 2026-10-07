@@ -1,7 +1,8 @@
 
 from tietokanta import luo_yhteys,pelaajan_lisays,pelaajan_tarkistus
-
+from lippu import lippu
 yhteys=luo_yhteys()
+
 while True:
     print("1. valitse olemassa oleva pelaaja")
     print(" 2. valitse uusi pelaaja")
@@ -31,3 +32,6 @@ while True:
 
 
 print(f"Peli alkaa olet valinnut {matkustaja} nimeksesi")
+
+
+pelaajan_lippu=lippu(matkustaja)
