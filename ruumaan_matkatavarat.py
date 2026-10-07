@@ -43,3 +43,4 @@ def ruuman_matkatavarat(matkustaja):
     print("Matkatavarat voidaan laittaa ruumaan.")
     matkalaukku_update(matkustaja,1)
 
+ruuman_matkatavarat()
