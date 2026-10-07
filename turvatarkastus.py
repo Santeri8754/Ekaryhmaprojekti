@@ -1,6 +1,7 @@
 
 
 import tietokanta
+from pelin_alku import matkustaja
 
 
 def turvatarkastus(matkalaukku, laiton):
@@ -8,12 +9,18 @@ def turvatarkastus(matkalaukku, laiton):
 
     while tavarat != "":
         matkalaukku.append(tavarat)
-        tavarat = input("Anna tavarat: ")
 
-    for tavara in matkalaukku:
-        if tavara in laiton:
-            print("Laittomia laitteita löytyi matkalaukustasi. Peli ohi!")
-            return
+
+        for tavara in matkalaukku:
+            if tavara in laiton:
+                tarkasrus = print("Laittomia laitteita löytyi matkalaukustasi. Peli ohi!")
+                break
+            else:
+                tarkasrus = print("ei laittomia laitteita löytynyt, voit jatkaa!")
+
+                return tarkasrus
+        break
+    print("Kirjoita tavarat uudelleen.")
 
     tietokanta.turvatarkastus_update(matkustaja)
 

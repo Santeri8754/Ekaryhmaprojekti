@@ -41,3 +41,4 @@ def ruuman_matkatavarat():
     print("Matkatavarat voidaan laittaa ruumaan.")
 
 
+ruuman_matkatavarat()
