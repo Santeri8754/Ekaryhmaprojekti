@@ -45,4 +45,4 @@ while True:
 
     turvatarkastus1 = turvatarkastus( [],laiton_lista,matkustaja)
     lentokentta=kentta(matkustaja)
-    pelin_loppu(kohde)
+    pelin_loppu(matkustaja)

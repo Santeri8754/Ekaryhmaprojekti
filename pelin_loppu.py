@@ -13,7 +13,7 @@ def pelin_loppu(kohde):
 
     elif valinta == "2":
         print("Peli on loppu. Kiitos pelaamisesta!")
-        return False
+        exit()
 
     else:
         print("Virheellinen komento.")
