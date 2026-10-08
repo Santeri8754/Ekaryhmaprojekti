@@ -7,9 +7,10 @@
     <list default="true" id="f3cca887-0b53-4311-8a3a-abad8697d131" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Ekaryhmaprojekti.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lippu.py" beforeDir="false" afterPath="$PROJECT_DIR$/lippu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turvatarkastus.py" beforeDir="false" afterPath="$PROJECT_DIR$/turvatarkastus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +150,7 @@
       <workItem from="1791460709388" duration="103000" />
       <workItem from="1791460901766" duration="155000" />
       <workItem from="1791461076348" duration="23000" />
+      <workItem from="1791461105325" duration="1424000" />
     </task>
     <task id="LOCAL−00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -180,7 +182,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$lippu.coverage" NAME="lippu Coverage Results" MODIFIED="1791362581103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$pelin_alku.coverage" NAME="pelin_alku Coverage Results" MODIFIED="1791460147088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$pelin_alku.coverage" NAME="pelin_alku Coverage Results" MODIFIED="1791462525699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$tietokanta.coverage" NAME="tietokanta Coverage Results" MODIFIED="1791392028738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$ruumaan_matkatavarat.coverage" NAME="ruumaan_matkatavarat Coverage Results" MODIFIED="1791372137190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ekaryhmaprojekti$turvatarkastus.coverage" NAME="turvatarkastus Coverage Results" MODIFIED="1791394097683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

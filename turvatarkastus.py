@@ -7,22 +7,21 @@ def turvatarkastus(matkalaukku, laiton,matkustaja):
 
     while tavarat != "":
         matkalaukku.append(tavarat)
-        tavarat = input("Anna tavarat: ")
+        tavarat = input("Anna tavarat(paina enter lopettaakseen tai tyhjä): ")
 
 
     for tavara in matkalaukku:
         if tavara in laiton:
-            tarkasrus = print("Laittomia laitteita löytyi matkalaukustasi. Peli ohi!")
+            print("Laittomia esineitä löytyi matkalaukustasi. Peli ohi!")
             security = 0
+            turvatarkastus_update(security, matkustaja)
             break
         else:
-            tarkasrus = print("ei laittomia laitteita löytynyt, voit jatkaa!")
+            print("Ei laittomia esineitä löytynyt, voit jatkaa!")
             security = 1
+            turvatarkastus_update(security, matkustaja)
 
-
-    turvatarkastus_update(security,matkustaja)
-
-    print("Matkalaukkusi on hyvä. Voit jatkaa!")
+print("Matkalaukkusi on hyvä. Voit jatkaa!")
 
 lista = []
 laiton_lista = ["aseet", "räjähteet", "huumeet", "piraatkit"]

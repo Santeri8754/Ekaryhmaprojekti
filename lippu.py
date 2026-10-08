@@ -1,4 +1,4 @@
-from tietokanta import luo_yhteys,lipun_haku,lipun_Update
+from tietokanta import luo_yhteys, lipun_haku,lipun_Update
 yhteys=luo_yhteys()
 def lippu(matkustaja):
 
