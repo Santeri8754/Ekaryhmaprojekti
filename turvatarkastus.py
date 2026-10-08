@@ -18,9 +18,7 @@ def turvatarkastus(matkalaukku, laiton,matkustaja):
         else:
             tarkasrus = print("ei laittomia laitteita löytynyt, voit jatkaa!")
             security = 1
-     #return tarkasrus, security
-        #break
-    print("Kirjoita tavarat uudelleen.")
+
 
     turvatarkastus_update(security,matkustaja)
 
