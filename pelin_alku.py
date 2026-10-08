@@ -4,6 +4,7 @@ from lippu import lippu
 from ruumaan_matkatavarat import ruuman_matkatavarat
 from turvatarkastus import turvatarkastus,laiton_lista
 from lentokentta import kentta
+from pelin_loppu import pelin_loppu
 yhteys=luo_yhteys()
 
 while True:
@@ -44,3 +45,4 @@ while True:
 
     turvatarkastus1 = turvatarkastus( [],laiton_lista,matkustaja)
     lentokentta=kentta(matkustaja)
+    pelin_loppu(kohde)
