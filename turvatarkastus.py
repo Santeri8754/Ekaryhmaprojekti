@@ -15,13 +15,14 @@ def turvatarkastus(matkalaukku, laiton,matkustaja):
             print("Laittomia esineitä löytyi matkalaukustasi. Peli ohi!")
             security = 0
             turvatarkastus_update(security, matkustaja)
-            break
+            exit()
         else:
             print("Ei laittomia esineitä löytynyt, voit jatkaa!")
             security = 1
             turvatarkastus_update(security, matkustaja)
 
-print("Matkalaukkusi on hyvä. Voit jatkaa!")
+
+    print("Matkalaukkusi on hyvä. Voit jatkaa!")
 
 lista = []
 laiton_lista = ["aseet", "räjähteet", "huumeet", "piraatkit"]

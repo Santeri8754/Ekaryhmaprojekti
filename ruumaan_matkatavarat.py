@@ -37,7 +37,7 @@ def ruuman_matkatavarat(matkustaja):
             print(f"laukku {i} on liian painava ({paino} kg)")
             print("suurin sallittu paino on 20 kg")
             matkalaukku_update(matkustaja,0)
-            return
+            exit()
 
     print("\nKaikki laukut hyväksytty!")
     print("Matkatavarat voidaan laittaa ruumaan.")

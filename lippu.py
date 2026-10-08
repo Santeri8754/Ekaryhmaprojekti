@@ -10,13 +10,13 @@ def lippu(matkustaja):
         vaihtoehto=input("Anna komento: ")
 
         if vaihtoehto=="1":
-            print("testaus")
+            print()
             if lippu == "1":
                 print("Lippua löytyi")
 
             else:
                 print("Peli päättyi, kun sinulla ei ole lippua")
-                break
+                exit()
 
         elif vaihtoehto=="2":
             lipun_Update(yhteys,matkustaja)
