@@ -43,4 +43,4 @@ while True:
     ruuma = ruuman_matkatavarat( matkustaja)
 
     turvatarkastus1 = turvatarkastus( [],laiton_lista,matkustaja)
-    lentokentta=kentta()
+    lentokentta=kentta(matkustaja)
