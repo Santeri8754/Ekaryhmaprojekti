@@ -8,7 +8,7 @@ def luo_yhteys():
          port= 3306,
          database='flight_game',
          user='root',
-        password="kissa12",
+        password="tietokone020",
          autocommit=True,
         use_pure = True
          )
@@ -43,7 +43,13 @@ def lipun_Update (yhteys,matkustaja):
     kursori.execute(sql_paivitys)
     return matkustaja
 
-
+def lentokentta(kentta_syote):
+    yhteys = luo_yhteys()
+    kursori = yhteys.cursor()
+    sql = f"SELECT name FROM airport WHERE name = '{kentta_syote}'"
+    kursori.execute(sql)
+    tulos = kursori.fetchone()
+    return tulos
 
 def matkalaukun_haku(yhteys, matkustaja):
     kursori = yhteys.cursor()
